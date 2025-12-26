@@ -1,13 +1,20 @@
 import type { OpenMeteoForecastResponse, WeatherDay } from '../types/weather.types';
 import type { PageServerLoad } from './$types';
 
+const CACHE_DURATION_MS = 30 * 60 * 1000;
 const baseUrl =
 	'https://api.open-meteo.com/v1/forecast?latitude=29.61&longitude=52.53&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,precipitation_probability_max&timezone=Asia/Tehran';
 
+let cached: { data: WeatherDay[]; timestamp: number } | null = null;
+
 const fetchWeather = async (): Promise<WeatherDay[]> => {
+	const now = Date.now();
+	if (cached && now - cached.timestamp < CACHE_DURATION_MS) {
+		return cached.data;
+	}
+
 	try {
 		const response = await fetch(baseUrl);
-
 		if (!response.ok) {
 			throw new Error(`Weather API error: ${response.status} ${response.statusText}`);
 		}
@@ -28,6 +35,8 @@ const fetchWeather = async (): Promise<WeatherDay[]> => {
 					weather.daily.precipitation_probability_max[i] > 50
 			} satisfies WeatherDay;
 		});
+
+		cached = { data: days, timestamp: now };
 
 		return days;
 	} catch (error) {
