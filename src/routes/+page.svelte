@@ -14,11 +14,11 @@
 	<table>
 		<thead>
 			<tr>
-				<th>Date</th>
-				<th>Day</th>
-				<th>Max/Min Temp</th>
-				<th>Rain Chance</th>
-				<th>Rain?</th>
+				<th>تاریخ</th>
+				<th>روز</th>
+				<th>-/+ دما</th>
+				<th>احتمال باران</th>
+				<th>بشینیم؟</th>
 			</tr>
 		</thead>
 		<tbody>
