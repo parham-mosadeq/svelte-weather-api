@@ -12,7 +12,7 @@
 				<th class="px-4 py-3 font-semibold">روز</th>
 				<th class="px-4 py-3 font-semibold">بیشینه / کمینه</th>
 				<th class="px-4 py-3 font-semibold">احتمال بارش</th>
-				<th class="px-4 py-3 font-semibold">بارش؟</th>
+				<th class="px-4 py-3 font-semibold">بشینیم؟</th>
 			</tr>
 		</thead>
 		<tbody>
