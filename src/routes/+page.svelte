@@ -3,7 +3,7 @@
 	const weather = data.weather;
 </script>
 
-<h1>آب و هوای عرق خوری</h1>
+<h1>کی بشینیم؟</h1>
 
 {#await weather}
 	<div class="flex h-64 items-center justify-center">
