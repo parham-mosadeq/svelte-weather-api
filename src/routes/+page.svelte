@@ -7,8 +7,6 @@
 	const weather = data.weather;
 </script>
 
-<h1>کی بشینیم؟</h1>
-
 {#await weather}
 	<Loading />
 {:then weather}
