@@ -1,7 +1,7 @@
 import type { PageServerLoad } from './$types';
 
 const baseUrl =
-	'https ://api.open-meteo.com/v1/forecast?latitude=29.61&longitude=52.53&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,precipitation_probability_max&timezone=Asia/Tehran';
+	'https://api.open-meteo.com/v1/forecast?latitude=29.61&longitude=52.53&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,precipitation_probability_max&timezone=Asia/Tehran';
 
 const fetchWeather = async () => {
 	try {
