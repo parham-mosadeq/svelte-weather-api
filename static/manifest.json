@@ -1,0 +1,52 @@
+{
+	"$schema": "https://json.schemas.app/manifest.json",
+	"name": "هوای شیراز - روزهای نوشیدنی",
+	"short_name": "هوای شیراز",
+	"description": "پیش‌بینی هفتگی آب و هوای شیراز با تمرکز روی روزهای بارانی و لحظات نوشیدنی ☕🍷",
+	"start_url": "/",
+	"scope": "/",
+	"display": "standalone",
+	"background_color": "#f3f4f6",
+	"theme_color": "#3b82f6",
+	"orientation": "portrait-primary",
+	"icons": [
+		{
+			"src": "/icons/icon-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png",
+			"purpose": "any"
+		},
+		{
+			"src": "/icons/icon-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "any maskable"
+		},
+		{
+			"src": "/icons/icon-1024x1024.png",
+			"sizes": "1024x1024",
+			"type": "image/png",
+			"purpose": "any"
+		}
+	],
+	"screenshots": [
+		{
+			"src": "/screenshots/screenshot-desktop.png",
+			"sizes": "1280x800",
+			"type": "image/png",
+			"form_factor": "wide",
+			"label": "نمایش جدول هوای هفتگی"
+		},
+		{
+			"src": "/screenshots/screenshot-mobile.png",
+			"sizes": "750x1334",
+			"type": "image/png",
+			"form_factor": "narrow",
+			"label": "اپلیکیشن در موبایل"
+		}
+	],
+	"categories": ["weather", "lifestyle", "utilities"],
+	"lang": "fa-IR",
+	"dir": "rtl",
+	"prefer_related_applications": false
+}
